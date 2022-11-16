@@ -1,0 +1,52 @@
+.wrapper-box{
+    width: 400px;
+    height: 400px;
+    background-color: yellow;
+    position: relative;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.2s;
+    transition:all 0.5 linear 0.2s;
+}
+.child-box{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position:absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 5s ease-out;
+}
+.wrapper-box:hover{
+    background-color: blue;
+}
+
+.child-box:hover{
+    background-color: lightblue;
+    transform: translate(-50%, -50%)  rotate(0deg);
+}
+.icon{
+    width: 100px;
+    animation: photoanimation 5s infinite;
+    position: absolute;
+}
+.animation-block{
+    position: relative;
+}
+/*
+@keyframes iconanimation{
+    0%{left:200px; transform: rotate(0deg);}
+    25%{left:400px;transform: rotate(90deg)}
+    50%{left:600px;transform: rotate(180deg)}
+    75%{left:800px;transform: rotate(270deg)}
+    100%{left:1000px;transform: rotate(360deg)}
+}*/
+@keyframes photoanimation{
+    0%{transform: translateX(200px);}
+    25%{transform: translateX(400px);}
+    50%{transform: translateX(600px);}
+    75%{transform: translateX(800px);}
+    100%{transform: translateX(1000px);}
+}
